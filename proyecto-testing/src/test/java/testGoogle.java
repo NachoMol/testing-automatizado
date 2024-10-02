@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,8 +20,10 @@ public class testGoogle {
         WebElement searchButton = driver.findElement(By.name("btnK"));
 
         searchBox.sendKeys("Selenium");
-        searchButton.click();
+        //searchButton.click();
+        searchBox.sendKeys(Keys.ENTER);
 
+        searchBox = driver.findElement(By.name("q"));
         searchBox.getAttribute("value");
 
 
