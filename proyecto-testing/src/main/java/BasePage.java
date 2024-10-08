@@ -47,5 +47,5 @@ public class BasePage {
     public String getText(By locator){
         return this.findElement(locator).getText();
     }
-    
+
 }
