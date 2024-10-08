@@ -10,7 +10,7 @@ public class SearchPage extends BasePage{
 
     private By searchButton = By.id("btn-buscador");
 
-    private By searchOk = By.xpath("//*[@id=\"68\"]/div[2]/div/div[1]");
+    private By searchOk = By.className("categoria");
 
 
     public SearchPage(WebDriver driver) {
