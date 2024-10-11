@@ -14,7 +14,6 @@ public class BasePage {
 
 
     public void setup() {
-        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
