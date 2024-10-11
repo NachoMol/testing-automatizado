@@ -7,7 +7,7 @@ public class BasePage {
 
     public WebDriver driver;
 
-    public BasePage(WebDriver driver) {
+    protected BasePage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -26,24 +26,24 @@ public class BasePage {
     }
 
 
-    public WebElement findElement(By locator){
+    protected WebElement findElement(By locator){
         return driver.findElement(locator);
     }
 
-    public void sendText(String inputText, By locator){
+    protected void sendText(String inputText, By locator){
         this.findElement(locator).clear();
         this.findElement(locator).sendKeys(inputText);
     }
 
-    public void sendKey(CharSequence key,  By locator){
+    protected void sendKey(CharSequence key,  By locator){
         this.findElement(locator).sendKeys(key);
     }
 
-    public void click(By locator){
+    protected void click(By locator){
         this.findElement(locator).click();
     }
 
-    public String getText(By locator){
+    protected String getText(By locator){
         return this.findElement(locator).getText();
     }
 
