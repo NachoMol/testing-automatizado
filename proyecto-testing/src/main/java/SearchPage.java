@@ -17,16 +17,16 @@ public class SearchPage extends BasePage{
         super(driver);
     }
 
-    public void escribirBusqueda(String ciudad){
+    public void escribirBusqueda(String ciudad) throws InterruptedException{
         this.sendText(ciudad,searchBox);
         this.sendKey(Keys.ENTER, searchBox);
     }
 
-    public void clickBuscar(){
+    public void clickBuscar() throws InterruptedException{
         this.click(searchButton);
     }
 
-    public String resultadoBusqueda(){
+    public String resultadoBusqueda() throws InterruptedException{
         return this.getText(searchOk);
     }
 

@@ -17,8 +17,11 @@ public class BasePage {
         driver.manage().window().maximize();
     }
 
-    public void url(String url){
+    public void url (String url) throws InterruptedException{
+
+
         driver.get(url);
+        Thread.sleep(1000);
     }
 
     public void close() {
@@ -30,20 +33,26 @@ public class BasePage {
         return driver.findElement(locator);
     }
 
-    protected void sendText(String inputText, By locator){
+    protected void sendText(String inputText, By locator) throws InterruptedException{
+        Thread.sleep(1000);
         this.findElement(locator).clear();
         this.findElement(locator).sendKeys(inputText);
     }
 
-    protected void sendKey(CharSequence key,  By locator){
+    protected void sendKey(CharSequence key,  By locator) throws InterruptedException {
+
+        Thread.sleep(1000);
         this.findElement(locator).sendKeys(key);
     }
 
-    protected void click(By locator){
+    protected void click(By locator) throws InterruptedException {
+        Thread.sleep(1000);
         this.findElement(locator).click();
     }
 
-    protected String getText(By locator){
+    protected String getText(By locator) throws InterruptedException {
+
+        Thread.sleep(1000);
         return this.findElement(locator).getText();
     }
 

@@ -20,7 +20,7 @@ public class SearchTest {
         searchPage.setup();
         searchPage.url("https://digital-booking-front.digitalhouse.com/");
 
-        Thread.sleep(1000);
+
     }
 
      @Test
@@ -30,11 +30,7 @@ public class SearchTest {
 
          searchPage.escribirBusqueda("Punta del este");
 
-        Thread.sleep(1000);
-
          searchPage.clickBuscar();
-
-         Thread.sleep(2000);
 
          searchPage.resultadoBusqueda();
     }
@@ -46,11 +42,8 @@ public class SearchTest {
 
         searchPage.escribirBusqueda("Paros");
 
-        Thread.sleep(1000);
-
         searchPage.clickBuscar();
 
-        Thread.sleep(2000);
 
         searchPage.resultadoBusqueda();
 
