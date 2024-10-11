@@ -2,6 +2,7 @@
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -29,6 +30,8 @@ public class SearchTest {
     }
 
      @Test
+     @Tag("BUSQUEDA")
+     @Tag("SMOKE")
     public void BusquedaExitosa() throws InterruptedException {
 
          SearchPage searchPage = new SearchPage(driver, wait);
@@ -41,6 +44,8 @@ public class SearchTest {
     }
 
     @Test
+    @Tag("BUSQUEDA")
+    @Tag("REGRESSION")
     public void BusquedaExitosaGrecia() throws InterruptedException {
 
         SearchPage searchPage = new SearchPage(driver, wait);
