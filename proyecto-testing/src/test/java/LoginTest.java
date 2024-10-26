@@ -50,6 +50,9 @@ public class LoginTest {
         loginPage.saludo();
         loginPage.nombre();
 
+
+        Assertions.assertEquals(loginPage.saludo(),"Hola,");
+        Assertions.assertEquals(loginPage.nombre(),"Nacho Test");
         test.log(Status.PASS, "Logueado correctamente");
 
     }
