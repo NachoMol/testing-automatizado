@@ -47,9 +47,6 @@ public class LoginTest {
         test.log(Status.PASS, "Cargar los datos validos del Login");
         loginPage.clickLogin();
 
-        loginPage.saludo();
-        loginPage.nombre();
-
 
         Assertions.assertEquals(loginPage.saludo(),"Hola,");
         Assertions.assertEquals(loginPage.nombre(),"Nacho Test");
