@@ -7,8 +7,11 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.example.integrador_testing_automatizado.Pages.NewAccountPage;
 import com.example.integrador_testing_automatizado.extentReports.ExtentFactory;
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -50,8 +53,10 @@ public class LoginTest {
 
         accountPage.clickOpenNewAccount();
         accountPage.seleccionarTipoCuenta();
-
         accountPage.clickSubmit();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("openAccountResult")));
 
         assertEquals(("Congratulations, your account is now open."),accountPage.obtenerMensajeExitoso());
         test.log(Status.PASS, "Se realizó la apertura de la cuenta exitosamente.");

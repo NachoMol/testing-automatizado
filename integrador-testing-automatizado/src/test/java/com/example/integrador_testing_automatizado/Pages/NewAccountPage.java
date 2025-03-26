@@ -3,6 +3,7 @@ package com.example.integrador_testing_automatizado.Pages;
 import com.example.integrador_testing_automatizado.Base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,7 +18,7 @@ public class NewAccountPage extends BasePage {
     private By botonSubmit = By.xpath("//INPUT[@type='button']");
 
 
-    private By cuentaExitosa = By.xpath("//p[contains(text(), 'Congratulations, your account is now open')]");
+    private By cuentaExitosa = By.xpath("//div[@id='openAccountResult']//p[contains(text(), 'Congratulations')]");
     //Congratulations, your account is now open.
 
 
