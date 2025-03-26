@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginTest {
@@ -52,7 +53,7 @@ public class LoginTest {
 
         accountPage.clickSubmit();
 
-        assertTrue(accountPage.obtenerMensajeExitoso().contains( "Congratulations, your account is now open."));
+        assertEquals(("Congratulations, your account is now open."),accountPage.obtenerMensajeExitoso());
         test.log(Status.PASS, "Se realizó la apertura de la cuenta exitosamente.");
 
     }

@@ -14,10 +14,10 @@ public class NewAccountPage extends BasePage {
     private By botonLogin = By.xpath("//input[@value='Log In']");
     private By openNewAccount = By.linkText("Open New Account");
     private By tipoCuentaId = By.id("type");
-    private By botonSubmit = By.xpath("//INPUT[@type='submit']");
+    private By botonSubmit = By.xpath("//INPUT[@type='button']");
 
 
-    private By cuentaExitosa = By.xpath("//P[text()='Congratulations, your account is now open.']");
+    private By cuentaExitosa = By.xpath("//p[contains(text(), 'Congratulations, your account is now open')]");
     //Congratulations, your account is now open.
 
 
