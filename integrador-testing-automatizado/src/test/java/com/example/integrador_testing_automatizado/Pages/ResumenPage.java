@@ -10,8 +10,7 @@ public class ResumenPage extends BasePage {
     private By password = By.xpath("//input[@name='password']");
     private By botonLogin = By.xpath("//input[@value='Log In']");
     private By accountsOverview = By.linkText("Accounts Overview");
-    private By mensajeBalance = By.xpath("//TD[@colspan='3'][text()='*Balance includes deposits that may be subject to holds\n" +
-            "        ']");
+    private By mensajeBalance = By.xpath("//*[@id=\"accountTable\"]/tfoot/tr/td");
     //*Balance includes deposits that may be subject to holds
 
 
